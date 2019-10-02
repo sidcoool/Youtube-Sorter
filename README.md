@@ -1,6 +1,11 @@
-# Youtube
+# Youtube Sorter
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
+It uses the [Youtube Api](https://developers.google.com/youtube/v3/docs) 
+
+## Utilites
+
+It Sorts the videos with many different filters to enrich user experience.
 
 ## Development server
 
