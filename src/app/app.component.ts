@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { apikey } from '../environments/environment'
-import { video } from '../environments/environment'
+import { apikey } from '../../environment.prod'
+import { video } from '../../environment.prod'
 
 @Component({
   selector: 'app-root',
@@ -16,7 +16,7 @@ export class AppComponent {
 
   search: boolean = true
   n_search = ""
-  p_search = "dwdwd"
+  p_search = ""
   videos: video[] = []
 
   //videos: {id:string, pic:string} = []
@@ -46,7 +46,7 @@ export class AppComponent {
           this.videos.push({
             like: data.items[0].statistics.likeCount,
             pic: item.snippet.thumbnails.medium.url,
-            title: item.snippet.title
+            title: item.snippet.title   
           })
         })
       }
@@ -54,9 +54,7 @@ export class AppComponent {
   }
 
   sortByLikes = () => {
-    this.videos.sort((a:video, b: video) => {
-      return (a.like > b.like ? 1 : -1)
-    })
+    this.videos.sort((a:video, b: video) => b.like - a.like)
   }
 
   psearch = () => {

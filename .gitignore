@@ -8,7 +8,11 @@
 /bazel-out
 
 #environment
-/src/environments
+environment.prod.ts
+
+.firebase
+.firebaserc
+firebase.json
 
 # dependencies
 /node_modules

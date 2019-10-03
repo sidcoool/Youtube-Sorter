@@ -6,13 +6,7 @@ export const environment = {
   production: false
 };
 
-export const apikey = "AIzaSyCLbLe9XxGHEjLuyGWhgGsSb6OYFe7ZSWs"
 
-export interface video {
-  like:number,
-    pic:string,
-    title:string
-}
 
 /*
  * For easier debugging in development mode, you can import the following file
