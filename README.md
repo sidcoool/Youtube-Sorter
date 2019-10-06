@@ -1,11 +1,15 @@
 # Youtube Sorter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
-It uses the [Youtube Api](https://developers.google.com/youtube/v3/docs) 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2. <br>
+It uses the [Youtube Api](https://developers.google.com/youtube/v3/docs) <br>
+[Try out](sorter-6f016.firebaseapp.com) 
+
 
 ## Utilites
 
-It Sorts the videos with many different filters to enrich user experience.
+* It Sorts the videos with many different filters to enrich user experience.
+* Open the video in your Youtube app or website with just one click.
+* Also download the video to your permanent storage on any device.
 
 ## Development server
 
