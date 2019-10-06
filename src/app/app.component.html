@@ -3,52 +3,53 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="abc.js"></script>
 </head>
 
 <nav class="navbar navbar-expand navbar-light alert-danger">
-  <a class="navbar-brand p-3" href="">
-    <img src="../assets/logo2.png" alt="" height="70px" width="70px" style="margin-left: 40px;">
+  <a class="navbar-brand " href="#">
+    <img src="../assets/logo2.png" alt="" height="40px" width="40px" style="margin-left: 40px;">
     <h4> <b> Youtube Sorter</b> </h4>
   </a>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item m-2" style="border: 2px solid red; border-radius: 30%;">
-        <a class="nav-link" href="#" (click)="searchTrue()">Smart Youtube Search</a>
-      </li>
-
-      <li class="nav-item m-2" style="border: 2px solid red; border-radius: 30%;">
-        <a class="nav-link" href="#" (click)="searchFalse()"> Smart Playlist Search</a>
-      </li>
-
-    </ul>
-
-  </div>
 </nav>
 
-<div class="text-center m-5" *ngIf="search">
-  <div class="row">
-    <div class="col">
-      <form class="form-inline my-2">
-        <input class="form-control mr-sm-2" [(ngModel)]="n_search" type="search" name="a" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-info my-2 my-sm-0" (click)="nsearch()">Search</button>
+  <div class="d-flex justify-content-around">
+    
+      <span class="nav-item bd-highlight alert-info">
+        <a class="nav-link" href="#" (click)="searchTrue()">Smart Youtube Search</a>
+      </span>
+
+      <span class="nav-item bd-highlight alert-info">
+        <a class="nav-link" href="#" (click)="searchFalse()"> Smart Playlist Search</a>
+      </span>
+  </div>
+
+
+<div class="container mt-3" *ngIf="search">
+      <form>
+        <div class="row">
+        <input class="form-control col mx-1" [(ngModel)]="n_search" type="search" name="a" placeholder="Search" aria-label="Search">
+        <button class="btn btn-primary col-2 mx-1" (click)="nsearch()">Search</button>
+      </div>
       </form><br>
       <button class="btn btn-warning btn-lg" (click)="sortByLikes()">Sort By Likes</button>
-    </div>
     
-    <div class="col">
+
+    <div class="row text-left mt-2">
       <ul *ngFor="let v of videos" type="none">
-          <div class="card" style="width: 18rem;">
-              <img [src]="v.pic" class="card-img-top" alt="...">
+        <li>  <div class="card" style="width: 20rem;">
+         <a href="#" (click)="linkOpen(v.link)"> <img [src]="v.pic" class="card-img-top"></a>
               <div class="card-body">
-                <p class="card-text">{{ v.title }} <br> Likes: {{ v.like }}</p>
-              </div>
+                <p class="card-text">{{ v.title }} <br>
+                     Likes: {{ v.like }} &nbsp;&nbsp;&nbsp;
+                    <a href="#" (click)="downloadVideo(v.link)"> Download </a>
+                </p>
             </div>
+          </div>
+        </li><br>
       </ul>
     </div>
   </div>
-</div>
 
 
 <div class="text-center m-5" *ngIf="!search">
