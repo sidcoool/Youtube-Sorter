@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2. <br>
 It uses the [Youtube Api](https://developers.google.com/youtube/v3/docs) <br>
-[Try out](http://sort-yt.web.app) 
+[Try out](http://sort-yt.web.app) g
 
 
 ## Utilites
